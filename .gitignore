@@ -1,0 +1,5 @@
+"venv_new_project/" 
+"__pycache__/" 
+"*.sqlite3" 
+"django.log" 
+"staticfiles/" 
