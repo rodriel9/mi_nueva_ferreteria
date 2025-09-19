@@ -18,9 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings # Importar settings
 from django.conf.urls.static import static # Importar static
+from django.http import HttpResponse # Importar HttpResponse
+
+def home_view(request):
+    return HttpResponse("<h1>¡Mi Ferretería está viva!</h1><p>Render deploy successful.</p>")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_view, name='home'), # Añadimos esta línea
 ]
 
 # Servir archivos estáticos y de medios durante el desarrollo
