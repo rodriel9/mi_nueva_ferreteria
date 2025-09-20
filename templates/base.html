@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Nueva Ferretería</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/logo-maipu.jpg' %}" alt="Logo Ferretería Maipú" style="width: 150px;">
+        <h1>Bienvenido a Mi Nueva Ferretería</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

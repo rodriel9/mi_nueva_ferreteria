@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.shortcuts import render # Importar render
 from django.conf import settings # Importar settings
 from django.conf.urls.static import static # Importar static
-from django.http import HttpResponse # Importar HttpResponse
+# from django.http import HttpResponse # Eliminamos HttpResponse
 
 def home_view(request):
-    return HttpResponse("<h1>¡Mi Ferretería está viva!</h1><p>Render deploy successful.</p>")
+    return render(request, 'base.html') # Renderizamos base.html
 
 urlpatterns = [
     path('admin/', admin.site.urls),
